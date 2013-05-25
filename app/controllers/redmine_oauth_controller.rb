@@ -37,6 +37,7 @@ class RedmineOauthController < AccountController
 
   def try_to_login info
    params[:back_url] = session[:back_url]
+   params[:autologin] = '1' # Force Auto Login (Keep Session)
    session.delete(:back_url)
    user = User.find_or_initialize_by_mail(info["email"])
     if user.new_record?
