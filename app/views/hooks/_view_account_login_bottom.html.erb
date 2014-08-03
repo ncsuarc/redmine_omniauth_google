@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag 'buttons', :plugin => 'redmine_omniauth_google' %>
+<%= stylesheet_link_tag 'login-hide', :plugin => 'redmine_omniauth_google' %>
 
 <% if Setting.plugin_redmine_omniauth_google[:oauth_authentification] %>
   <%= link_to oauth_google_path(:back_url => back_url) do %>
